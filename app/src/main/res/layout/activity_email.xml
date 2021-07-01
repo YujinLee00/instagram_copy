@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/find_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center"
+        android:text="Enter phone number or email address"
+        android:textSize="18sp"
+        android:textColor="#000000" />
+
+    <TabHost
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/th">
+    <TabWidget
+        android:id="@android:id/tabs"
+        android:layout_gravity="top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"/>
+
+
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:paddingTop="150sp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:id="@+id/tab_view1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <EditText
+                    android:id="@+id/login_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/btn_background"
+                    android:gravity="center|left"
+                    android:hint="      전화번호,이메일 주소, 또는 사용자 이름"
+                    android:maxLines="1"
+                    android:paddingHorizontal="4dp"
+                    android:singleLine="true"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="#000000"
+                    android:theme="@style/Widget.AppCompat.Button" />
+
+                <Button
+                android:id="@+id/btn_next"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="25dp"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/login_background"
+                android:text="다음" />
+
+                <Button
+                    android:id="@+id/btn_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="25dp"
+                    android:textColor="#fff"
+                    android:textStyle="bold"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/login_background"
+                    android:text="로그인" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/tab_view2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textSize="30sp"
+                    android:textColor="#00FF00"
+                    android:text="프로그래밍 기술"/>
+            </LinearLayout>
+        </FrameLayout>
+    </TabHost>
+
+</LinearLayout>
